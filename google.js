@@ -74,21 +74,23 @@ function play() {
 	Me();
 	var timeouts = [];
 	timeouts[0] = 3550;
+	// intervalos da jogada anterior
 	var intervals = [
-		1000,
-		1000,
-		1150,
-		1250,
-		1200,
-		1150,
-		1150,
-		1200
+		1000, // 2
+		1000, // 3
+		1100, // 4
+		1150, // 5
+		1250, // 6
+		1200, // 7
+		1150, // 8
+		1150, // 9
+		1200 // 10
 	];
 	for (var i = 1; i< 10; i++) {
 		timeouts[i] = timeouts[i-1] + intervals[i-1];
 	}
 	for (var i = 0; i < 10; i++) {
-	  setTimeout(Le, timeouts[i]);  
+	  setTimeout(Le, intervals[i]);  
 	}
 }
 
