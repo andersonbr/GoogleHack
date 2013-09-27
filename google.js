@@ -88,7 +88,7 @@ function play() {
 		timeouts[i] = timeouts[i-1] + intervals[i-1];
 	}
 	for (var i = 0; i < 10; i++) {
-	  setTimeout(Le, intervals[i]);  
+	  setTimeout(Le, timeouts[i]);  
 	}
 }
 
