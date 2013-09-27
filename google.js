@@ -71,7 +71,6 @@ Wc(window.location.href),window.parent&&window.parent.location&&Wc(window.parent
 !1;if(2==P&&N&&M){var a=M,b=a.d["music-3"];b&&b.loaded&&wb(a,"music-3",b.currentTime);b&&(b.loop=!0)}Fe||(He=fa(),Pe())});Be.style.background="url(/logos/2013/bday13/background.jpg) no-repeat";Ke();Pe()})}))},function(){Ee=!0;window.clearInterval(Qd);if(N&&M){var a=M,b;for(b in a.d){var c=xb(a,b);c&&c.loaded&&(c.currentTime=0)}}N&&H&&fc(H);N&&M&&M.M();N&&H&&H.M();window.clearTimeout(Ge);I&&I.M();De&&De.M()});
 
 function play() {
-	Me();
 	var timeouts = [];
 	timeouts[0] = 3550;
 	// intervalos da jogada anterior
@@ -89,6 +88,7 @@ function play() {
 	for (var i = 1; i< 10; i++) {
 		timeouts[i] = timeouts[i-1] + intervals[i-1];
 	}
+	Me();
 	for (var i = 0; i < 10; i++) {
 	  setTimeout(Le, intervals[i]);  
 	}
