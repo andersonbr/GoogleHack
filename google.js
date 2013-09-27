@@ -84,10 +84,10 @@ function play() {
 		1150,
 		1200
 	];
-	for (var i = 0; i< 10; i++) {
+	for (var i = 1; i< 10; i++) {
 		timeouts[i] = timeouts[i-1] + intervals[i-1];
 	}
-	for (var i =0; i < 10; i++) {
+	for (var i = 0; i < 10; i++) {
 	  setTimeout(Le, intervals[i]);  
 	}
 }
