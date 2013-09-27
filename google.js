@@ -72,18 +72,21 @@ Wc(window.location.href),window.parent&&window.parent.location&&Wc(window.parent
 
 function play() {
 	Me();
-	var init = 3550;
-	var intervals = [];
-	intervals[0] = init; // 1
-	intervals[1] = intervals[1-1] + 1000; // 2
-	intervals[2] = intervals[2-1] + 1000; // 3
-	intervals[3] = intervals[3-1] + 1100; // 4
-	intervals[4] = intervals[4-1] + 1150; // 5
-	intervals[5] = intervals[5-1] + 1250; // 6
-	intervals[6] = intervals[6-1] + 1200;
-	intervals[7] = intervals[7-1] + 1150;
-	intervals[8] = intervals[8-1] + 1150;
-	intervals[9] = intervals[9-1] + 1200;
+	var timeouts = [];
+	timeouts[0] = 3550;
+	var intervals = [
+		1000,
+		1000,
+		1150,
+		1250,
+		1200,
+		1150,
+		1150,
+		1200
+	];
+	for (var i = 0; i< 10; i++) {
+		timeouts[i] = timeouts[i-1] + intervals[i-1];
+	}
 	for (var i =0; i < 10; i++) {
 	  setTimeout(Le, intervals[i]);  
 	}
