@@ -90,7 +90,7 @@ function play() {
 	}
 	Me();
 	for (var i = 0; i < 10; i++) {
-	  setTimeout(Le, intervals[i]);  
+	  setTimeout(function() { Le(); console.log("jogada "+i); }, intervals[i]);  
 	}
 }
 
