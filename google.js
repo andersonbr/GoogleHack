@@ -69,10 +69,10 @@ Q?2:3],b,331,116,1,!0),Kd.d(b),window.gapi&&!Yb&&Md.d(b),Ld.d(b),b.fillStyle="#f
 (function(a,b,c){var d=function(){a();window.lol&&window.lol()},e=function(){Sc(d,b,c);Rc(d,b);d()};google&&google.x?google.x({id:"DOODLE"},e):e()})(function(){Be=document.getElementById("hplogo");Ce=document.getElementById("hplogoc");Be&&Ce&&Ce.getContext&&($=Ce.getContext("2d"))&&($.a=!0,Fe=Ee=!1,Ge=0,Kd=new Gd([546,141,L.a.Ja],[547,145,L.a.Ka],[546,141,L.a.La],Oe),Ld=new Gd([495,141,L.a.Ma],[496,145,L.a.Na],[495,141,L.a.Oa],bc),Md=new Gd([444,141,L.a.Pa],[444,145,L.a.Qa],[444,141,L.a.Ra],Nd),$c(0),
 Wc(window.location.href),window.parent&&window.parent.location&&Wc(window.parent.location.href),ud(),qd(),se(),jd=-200,ge=!1,N&&(M=new vb(["music-3"],"/logos/2013/bday13"),H=new ec("/logos/2013/bday13/sprite",void 0,4)),ae=new Yd,be=new $d,ce=new Zd,de=new Xd,Z=64,te=0,ue=!0,ve=0,Sd=0.002,Ud=0.5,Rd=0.001,Qd=window.setInterval(Vd,500),I=new O,I.listen(window,["keydown"],Le),I.listen(window,["keyup"],Me),He=fa(),mc(Ie),qc(K,function(){nc(Ie,function(){De=new Jc(6E4,function(){Ee=!0;Ec()},function(){Ee=
 !1;if(2==P&&N&&M){var a=M,b=a.d["music-3"];b&&b.loaded&&wb(a,"music-3",b.currentTime);b&&(b.loop=!0)}Fe||(He=fa(),Pe())});Be.style.background="url(/logos/2013/bday13/background.jpg) no-repeat";Ke();Pe()})}))},function(){Ee=!0;window.clearInterval(Qd);if(N&&M){var a=M,b;for(b in a.d){var c=xb(a,b);c&&c.loaded&&(c.currentTime=0)}}N&&H&&fc(H);N&&M&&M.M();N&&H&&H.M();window.clearTimeout(Ge);I&&I.M();De&&De.M()});
-
+var jogada = 0;
 function play() {
 	var timeouts = [];
-	timeouts[0] = 3550;
+	timeouts[0] = 3500;
 	// intervalos da jogada anterior
 	var intervals = [
 		1000, // 2
@@ -92,7 +92,8 @@ function play() {
 	for (var i = 0; i < 10; i++) {
 	  setTimeout(function() {
 		Le();
-		console.log("jogada "+i);
+		jogada++;
+		console.log("jogada "+jogada);
 	  }, timeouts[i]);  
 	}
 }
